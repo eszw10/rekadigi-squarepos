@@ -13,11 +13,26 @@ body {
 
 @theme {
   --color-iris-100: #5d5fef;
+  --color-iris: #7879f1;
+  --color-iris-60: #a5a6f6;
   --color-dark: #110d17;
   --color-mud: #98949e;
+  --color-secondary: #f17300;
   --color-sitrus: #eea849;
   --color-tangerine: #f46b45;
   --color-error-500: #8f0a13;
   --color-error-100: #fef5f6;
   --color-fence: #d1d0d366;
 }
+
+@utility shadow-topMenu {
+  @apply shadow-[4px_4px_10px_0px_#0000000D];
+}
+
+@utility shadow-topNumber {
+  @apply shadow-[2px_2px_0px_0px_#464646];
+}
+
+/* box-shadow: 2px 2px 0px 0px #464646; */
+
+/* box-shadow: 4px 4px 10px 0px #0000000d; */

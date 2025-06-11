@@ -1,9 +1,9 @@
-const StockPage = () => {
+const PromoPage = () => {
   return (
     <div className="h-full text-mud flex items-center justify-center text-3xl font-semibold">
-      This is Menu Stock Page.
+      You got no promos.
     </div>
   );
 };
 
-export default StockPage;
+export default PromoPage;

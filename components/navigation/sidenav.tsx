@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const SideNav = () => {
   return (
-    <nav className="border-r border-fence flex flex-col  h-screen">
+    <nav className="border-r border-fence flex flex-col h-full">
       <div className="px-6 mt-6 flex flex-col gap-6">
         <Logo />
         <NavLinks />
