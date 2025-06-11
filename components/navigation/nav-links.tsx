@@ -22,8 +22,8 @@ const NavLinks = () => {
             {link.icon}
             <span className="font-semibold">{link.name}</span>
             {link.name === "Dashboard" && (
-              <div className="rounded-full h-[18px] w-[18px] bg-linear-[135deg] text-[10px] text-center text-white from-sitrus to-tangerine font-semibold">
-                4
+              <div className="flex items-center justify-center rounded-full ms-auto h-[18px] w-[18px] bg-linear-[135deg] text-[10px] text-center text-white from-sitrus to-tangerine font-semibold">
+                <span>4</span>
               </div>
             )}
           </Link>

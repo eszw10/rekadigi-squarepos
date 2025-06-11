@@ -9,11 +9,11 @@ const Account = () => {
         width={36}
         height={36}
         priority
-        className="rounded-full"
+        className="rounded-full h-8 w-8"
       />
       <div className="">
-        <p className="font-semibold text-dark">Savannah N</p>
-        <p className="text-mud text-[10px]">Food Quality Manager</p>
+        <p className="font-semibold text-sm text-dark">Savannah N</p>
+        <p className="text-mud text-[10px] w-full">Food Quality Manager</p>
       </div>
     </div>
   );
