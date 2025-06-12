@@ -13,14 +13,18 @@ body {
   --color-iris: #7879f1;
   --color-iris-60: #a5a6f6;
   --color-ocean: #56ccf2;
+  --color-ocean-50: #f6fcfe;
   --color-ocean-500: #2f80ed;
   --color-leaf: #38ef7d;
+  --color-leaf-50: #f6fef9;
   --color-leaf-700: #11998e;
   --color-orchid: #e100ff;
   --color-veronica: #7f00ff;
+  --color-veronica-50: #fef5ff;
   --color-dark: #110d17;
   --color-mud: #98949e;
   --color-secondary: #f17300;
+  --color-secondary-50: #fefbf6;
   --color-sitrus: #eea849;
   --color-tangerine: #f46b45;
   --color-error-500: #8f0a13;
@@ -39,6 +43,8 @@ body {
   @apply shadow-[2px_2px_0px_0px_#464646];
 }
 
-/* background: linear-gradient(135deg, #E100FF 0%, #7F00FF 100%); */
+@utility shadow-pagination {
+  @apply shadow-[2px_2px_4px_0px_#0000000D];
+}
 
 /* box-shadow: 2px 2px 4px 0px #0000000D; */
