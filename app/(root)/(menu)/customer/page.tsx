@@ -1,13 +1,13 @@
 import AnalyticsBanner from "@/components/banner/analytics";
 import TopMenu from "@/components/banner/top-menu";
 import CustomerActions from "@/components/customer/customer-actions";
-import CustomerTable from "@/components/customer/customer-table";
+import CustomerTable from "@/components/customer/table/customer-table";
 import Pagination from "@/components/pagination";
 
 const CusTomerPage = () => {
   return (
     <div className="h-full grid md:grid-cols-[1fr_272px] gap-4 text-mud font-semibold pt-4">
-      <section className="flex flex-col">
+      <section className="flex flex-col gap-6">
         <CustomerActions />
         <CustomerTable />
         <div className="bg-neutral-50 rounded py-2 px-3 flex items-center justify-between mt-auto">
