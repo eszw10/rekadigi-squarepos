@@ -48,5 +48,3 @@ body {
 @utility shadow-pagination {
   @apply shadow-[2px_2px_4px_0px_#0000000D];
 }
-
-/* box-shadow: 2px 2px 4px 0px #0000000D; */

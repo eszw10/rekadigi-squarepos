@@ -12,6 +12,15 @@ const customerSlice = createSlice({
     addCustomer(state, action) {
       state.customer.push(action.payload);
     },
+    editCustomerById(state, action) {
+      const { id, data } = action.payload;
+      const customerToEdit = state.customer.find(
+        (customer) => customer.id === id
+      );
+      if (customerToEdit) {
+        Object.assign(customerToEdit, data);
+      }
+    },
     deleteCustomer(state, action) {
       state.customer = state.customer.filter(
         (customer) => customer.id !== action.payload
@@ -20,5 +29,6 @@ const customerSlice = createSlice({
   },
 });
 
-export const { addCustomer, deleteCustomer } = customerSlice.actions;
+export const { addCustomer, editCustomerById, deleteCustomer } =
+  customerSlice.actions;
 export default customerSlice.reducer;

@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 
 const NavLinks = () => {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <div className="text-xs text-mud">
       <p className=" text-[10px] mb-4">Menu</p>

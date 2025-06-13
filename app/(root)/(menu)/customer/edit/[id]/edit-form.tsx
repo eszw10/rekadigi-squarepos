@@ -1,25 +1,21 @@
 "use client";
 
-import { addCustomer } from "@/lib/customerSlice";
-import { useAppDispatch } from "@/lib/hooks";
+import { editCustomerById } from "@/lib/customerSlice";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { ArrowLeft } from "iconsax-reactjs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React from "react";
 
-const CreateCustomerPage = () => {
+const EditForm = ({ id }: { id: string }) => {
+  const customers = useAppSelector((state) => state.customers.customer);
+  const customer = customers?.find((customer) => customer.id === Number(id));
   const router = useRouter();
   const dispatch = useAppDispatch();
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData);
-    dispatch(
-      addCustomer({
-        id: Math.floor(Math.random() * 1000),
-        ...data,
-      })
-    );
+    dispatch(editCustomerById({ id: Number(id), data }));
 
     router.push("/customer");
   }
@@ -44,6 +40,7 @@ const CreateCustomerPage = () => {
             minLength={3}
             placeholder="customer name.."
             className="border-2 border-iris rounded-lg p-2 ring-iris-100 focus:ring-1 outline-none"
+            defaultValue={customer?.name}
             required
           />
         </div>
@@ -55,6 +52,7 @@ const CreateCustomerPage = () => {
             name="level"
             id="level"
             className="border-2 border-iris rounded-lg p-2"
+            defaultValue={customer?.level}
             required
           >
             <option value="Warga">Warga</option>
@@ -74,6 +72,7 @@ const CreateCustomerPage = () => {
             minLength={3}
             placeholder="customer favourite menu.."
             className="border-2 border-iris rounded-lg p-2 ring-iris-100 focus:ring-1 outline-none"
+            defaultValue={customer?.favMenu}
             required
           />
         </div>
@@ -84,6 +83,7 @@ const CreateCustomerPage = () => {
           <input
             type="text"
             name="totalTransaction"
+            defaultValue={customer?.totalTransaction}
             required
             placeholder="total of customer's transaction.."
             className="border-2 border-iris rounded-lg p-2 ring-iris-100 focus:ring-1 outline-none"
@@ -108,4 +108,5 @@ const CreateCustomerPage = () => {
     </div>
   );
 };
-export default CreateCustomerPage;
+
+export default EditForm;

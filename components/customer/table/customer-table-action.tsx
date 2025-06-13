@@ -3,6 +3,7 @@
 import { Edit2, ShieldSearch, Trash } from "iconsax-reactjs";
 import { deleteCustomer } from "@/lib/customerSlice";
 import { useAppDispatch } from "@/lib/hooks";
+import Link from "next/link";
 
 const CustomerTableAction = ({ customerId }: { customerId: number }) => {
   const dispatch = useAppDispatch();
@@ -12,9 +13,12 @@ const CustomerTableAction = ({ customerId }: { customerId: number }) => {
         <ShieldSearch size={12} variant="TwoTone" />
         <span>Detail</span>
       </div>
-      <div className="py-[8.5px] px-3 bg-neutral-50 rounded-sm">
+      <Link
+        href={`/customer/edit/${customerId}`}
+        className="py-[8.5px] px-3 bg-neutral-50 rounded-sm"
+      >
         <Edit2 variant="TwoTone" size={12} />
-      </div>
+      </Link>
       <button
         className="bg-error-100 py-[8.5px] px-3 rounded-sm cursor-pointer hover:bg-red-100 transition-colors duration-300"
         onClick={() => dispatch(deleteCustomer(customerId))}
