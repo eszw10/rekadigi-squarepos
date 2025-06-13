@@ -60,13 +60,13 @@ export const customers = [
     name: "Calvin Steward",
     level: "Konglomerat",
     favMenu: "BBQ Rib Dinner",
-    totalTransaction: "IDR 467,500",
+    totalTransaction: "467,500",
   },
   {
     id: 10,
     name: "Calvin Steward",
     level: "Konglomerat",
     favMenu: "BBQ Rib Dinner",
-    totalTransaction: "IDR 467,500",
+    totalTransaction: "467,500",
   },
 ];

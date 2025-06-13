@@ -33,6 +33,7 @@ body {
   --color-fence: #d1d0d366;
   --color-placeholder: #d1d0d3;
   --color-steel: #6d6d6d;
+  --color-backdrop: rgba(0, 0, 0, 0.3);
 }
 
 @utility shadow-topMenu {
