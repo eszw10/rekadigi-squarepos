@@ -11,7 +11,7 @@ const CustomerActions = () => {
     <section className="text-sm font-semibold flex items-center gap-4 mt-4 ">
       <Link
         href={"/customer/create"}
-        className="bg-iris py-3 px-4 rounded-lg flex items-center gap-1 backdrop-blur-[10px] z-30"
+        className="bg-iris py-3 px-4 rounded-lg flex items-center gap-1 backdrop-blur-[10px] z-30 hover:bg-iris-300/70 hover:shadow-xl transition-colors duration-300"
       >
         <Add size={16} />
         <span>Add New Customer</span>

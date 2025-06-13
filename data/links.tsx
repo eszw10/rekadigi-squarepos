@@ -11,6 +11,7 @@ import {
   UserSquare,
 } from "iconsax-reactjs";
 
+// Menu
 export const menuLinks = [
   {
     name: "Dashboard",
@@ -54,6 +55,7 @@ export const menuLinks = [
   },
 ];
 
+// Integration
 export const integrationLinks = [
   {
     name: "Stock",
